@@ -34,7 +34,7 @@ public class ProductController {
 		return response;
 		
 	}
-	/*@GetMapping("/getallproductdata")
+	/*@GetMapping("/getallproductdatafromproduct")
 	public ResponseEntity<List<Product>> getAllProduct()
 	{
 		
@@ -44,7 +44,7 @@ public class ProductController {
 		
 		return response;
 	}*/
-	@GetMapping("/getsinglerproduct/{productId}")
+	@GetMapping("/getsinglefromproduct/{productId}")
 	public ResponseEntity<Product> getSingleData(@PathVariable("productId") int productId)
 	{
 		Product productRef=productservicei.getSingleData(productId);
@@ -54,7 +54,7 @@ public class ProductController {
 		return response;
 		
 	}
-	@PutMapping("/updateProduct/{productId}")
+	@PutMapping("/updatefromProduct/{productId}")
 	public ResponseEntity<Product> updateProduct(@PathVariable("productId") int productId, @RequestBody Product product) 
 	{
 		product.setProductId(productId);
@@ -64,7 +64,7 @@ public class ProductController {
 		
 		return response;
 		}
-	@DeleteMapping("/deleteproduct/{productId}")
+	@DeleteMapping("/deletefromproduct/{productId}")
 	public ResponseEntity<Product> deleteProduct(@PathVariable("productId") int productId)
 	{
 		

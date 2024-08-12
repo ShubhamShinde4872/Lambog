@@ -76,6 +76,7 @@ public class ProductController {
 		
 		//delete product from product
 		//push on git
+		//pull the code
 		
 		
 	}
